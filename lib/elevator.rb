@@ -12,4 +12,10 @@ class Elevator
       return "You are on the #{_num}#{pos} floor" if _num == i + 1
     end
   end
+
+  def go_to_group(_nums = [])
+    _nums.sort!
+    last = _nums.length - 1
+    "The elevator reached the floors: #{_nums.first(last).join(', ')} and #{_nums[last]}"
+  end
 end
