@@ -11,21 +11,21 @@ describe Elevator do
   describe '#go_to' do
     context 'from the ground floor' do
       it 'goes to the 12th floor of the building' do
-        expect(elevator.go_to(12)).to eq('You are on the 12th floor')
+        expect(elevator.go_to(12)).to eq('12th floor reached')
       end
 
       it 'goes to 2nd floor of the building' do
-        expect(elevator.go_to(2)).to eq('You are on the 2nd floor')
+        expect(elevator.go_to(2)).to eq('2nd floor reached')
       end
 
       it 'goes to 3nd floor of the building' do
-        expect(elevator.go_to(3)).to eq('You are on the 3rd floor')
+        expect(elevator.go_to(3)).to eq('3rd floor reached')
       end
     end
 
     context 'from any floor' do
       it 'goes to the 1st floor of the building' do
-        expect(elevator.go_to(1)).to eq('You are on the 1st floor')
+        expect(elevator.go_to(1)).to eq('1st floor reached')
       end
     end
 
@@ -66,10 +66,10 @@ describe Elevator do
     context 'from the ground floor' do
       it 'goes to the floors 3, 4, 7 and 10' do
         expect(elevator.go_to_group([4, 3, 10, 7])).to eq([
-                                                            'You are on the 3rd floor',
-                                                            'You are on the 4th floor',
-                                                            'You are on the 7th floor',
-                                                            'You are on the 10th floor'
+                                                            '3rd floor reached',
+                                                            '4th floor reached',
+                                                            '7th floor reached',
+                                                            '10th floor reached'
                                                           ])
       end
     end

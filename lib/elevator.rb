@@ -3,10 +3,10 @@ class Elevator
 
   def go_to(_num)
     check_arg_before(_num)
-    return "You are on the #{_num}th floor" unless (1..3).cover?(_num)
+    return "#{_num}th floor reached" unless (1..3).cover?(_num)
 
     %w(st nd rd).each_with_index do |_pos, _i|
-      return "You are on the #{_num}#{_pos} floor" if _num == _i + 1
+      return "#{_num}#{_pos} floor reached" if _num == _i + 1
     end
   end
 
