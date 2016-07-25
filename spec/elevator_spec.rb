@@ -65,7 +65,12 @@ describe Elevator do
   describe '#go_to_group' do
     context 'from the ground floor' do
       it 'goes to the floors 3, 4, 7 and 10' do
-        expect(elevator.go_to_group([4, 3, 10, 7])).to eq('The elevator reached the floors: 3, 4, 7 and 10')
+        expect(elevator.go_to_group([4, 3, 10, 7])).to eq([
+                                                            'You are on the 3rd floor',
+                                                            'You are on the 4th floor',
+                                                            'You are on the 7th floor',
+                                                            'You are on the 10th floor'
+                                                          ])
       end
     end
   end

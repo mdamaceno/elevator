@@ -15,7 +15,11 @@ class Elevator
 
   def go_to_group(_nums = [])
     _nums.sort!
-    last = _nums.length - 1
-    "The elevator reached the floors: #{_nums.first(last).join(', ')} and #{_nums[last]}"
+    messages = []
+    _nums.each do |_num|
+      messages << go_to(_num)
+    end
+
+    messages
   end
 end
