@@ -35,10 +35,6 @@ module Elevator
     include Elevator
   end
 
-  def self.destiny(_num)
-    Basement.new.go_to(_num)
-  end
-
   def self.destinations(_nums = [])
     Basement.new.go_to_group(_nums)
   end
