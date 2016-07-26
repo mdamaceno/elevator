@@ -2,8 +2,6 @@ require 'spec_helper'
 require 'elevator'
 
 describe Elevator do
-  let(:elevator) { Elevator }
-
   it 'has a constant with quantity of floors' do
     expect { Elevator::FLOORS_CONST }.to_not raise_error
   end
