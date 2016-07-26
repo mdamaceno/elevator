@@ -20,6 +20,7 @@ module Elevator
     raise Elevator::InvalidArgument, 'Array must not have any number greater than the maximum number of floors.' unless _nums.all? { |i| i < FLOORS_CONST }
     raise Elevator::InvalidArgument, 'Array must have numbers greater than 0.' unless _nums.all? { |i| i > 0 }
 
+    _nums.uniq!
     _nums.sort!
     messages = []
 

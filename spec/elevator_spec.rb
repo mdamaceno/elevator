@@ -69,6 +69,17 @@ describe Elevator do
                                                              '10th floor reached'
                                                            ])
       end
+
+      context 'with duplicated numbers' do
+        it 'goes to the floors 3, 4, 7 and 10' do
+          expect(Elevator.destinations([7, 4, 3, 4, 10, 7])).to eq([
+                                                                     '3rd floor reached',
+                                                                     '4th floor reached',
+                                                                     '7th floor reached',
+                                                                     '10th floor reached'
+                                                                   ])
+        end
+      end
     end
 
     context 'with invalid argument' do
