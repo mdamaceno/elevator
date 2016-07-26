@@ -73,5 +73,13 @@ describe Elevator do
                                                           ])
       end
     end
+
+    context 'with invalid argument' do
+      it 'raise an error if array contains a non integer element' do
+        expect do
+          elevator.go_to_group([9, 4, 10, 'a'])
+        end.to raise_error(ArgumentError, 'Array must have only integer.')
+      end
+    end
   end
 end
