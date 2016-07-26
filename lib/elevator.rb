@@ -25,9 +25,4 @@ class Elevator
 
     messages
   end
-
-  private
-
-  def check_arg_before(_num)
-  end
 end
